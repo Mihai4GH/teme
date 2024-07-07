@@ -1,0 +1,12 @@
+*** The core functionality ***
+
+**Storing the names**
+In order to store the names i used a simple hash table who linearily searches itselfs in order to provide an index to be used in the graph for each city
+
+For the 2 task iimplemented 2 different graphs structures
+
+**Task 1**
+In order to store the sections of each route i used a pair that contains the starting point, the destination, the number of sections and the sections itselfs oriented from the starting point to the endpoint. In this manner when indtroducing in graph and edge from u to v containing the sections a1, a2, ... an, I also introduced it's complementary pair: from v to u, and the asscociated sections will be an, ..., a2, a1, in this order. In order to update each route trough a year I also saved the sections from the last year. To get the image of the routes after one year, firstly I update the old sections in order to save the data. Then I'm doubleing the wear coefficent of every sections. Following that check every new sections and update it corespondingly according to its neighbours.
+
+**Task 2**
+I used a simple structure of a ponderate graph, and apliend Dijktra to it, untill i got the k routes. In order to check  if the route from A to B must be kept it has to pass this verifications : A and B must be "selected" when performing Dijktra and The A to B or B to A path must be a part of the resulted tree obtained trough the algorithm
