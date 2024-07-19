@@ -1,0 +1,6 @@
+./src/tasks.c:15: CHECK:LONG_LINE: line length of 98 exceeds 80 columns
+./src/tasks.c:83: CHECK:LONG_LINE: line length of 86 exceeds 80 columns
+./src/tasks.c:90: CHECK:LONG_LINE: line length of 81 exceeds 80 columns
+./src/tasks.c:103: CHECK:LONG_LINE: line length of 91 exceeds 80 columns
+./src/tasks.c:115: CHECK:LONG_LINE: line length of 86 exceeds 80 columns
+./src/tasks.c:151: CHECK:LONG_LINE: line length of 165 exceeds 80 columns

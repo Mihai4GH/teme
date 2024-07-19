@@ -1,0 +1,33 @@
+{% extends '_base.html' %}
+
+{% block title %}CloudSnap {% endblock %}
+
+
+{% block navbar %}
+<div class="navbar-nav mr-auto">
+  <a class="nav-item nav-link" href="/">Home</a>
+  <a class="nav-item nav-link active" href="/edit">Edit</a>
+  <a class="nav-item nav-link" href="/about">About</a>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<h1 class="main-title">Edit Gallery</h1>
+<form method="post" action="/upload" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select class="form-control" id="category" name="category" required>
+      <option value="People">People</option>
+      <option value="Nature">Nature</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input type="file" class="form-control-file" id="image" name="image" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+<!-- TODO: Insert the content blocks for the front page. -->
+<!-- TODO: Don't forget to extend the base template ;) -->
+{% extends '_base.html' %}
+
+{% block title %}CloudSnap {% endblock %}
+
+{% block navbar %}
+<div class="collapse navbar-collapse" id="navbarToggle">
+<div class="navbar-nav mr-auto">
+  <a class="nav-item nav-link" href="/">Home</a>
+  <a class="nav-item nav-link" href="/edit">Edit</a>
+  <a class="nav-item nav-link active" href="/about">About</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<h1 class="main-title">About Us</h1>
+<p>
+  Welcome to <b>CloudSnap</b>, your premier destination for secure and seamless photo storage in the cloud. At CloudSnap, we understand the value of your memories and the importance of keeping them safe, accessible, and organized. Our cutting-edge cloud storage solutions offer you the perfect way to store, manage, and share your photos with ease and confidence.
+</p>
+
+{% endblock %}

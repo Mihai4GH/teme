@@ -1,0 +1,27 @@
+<!-- TODO: Don't forget to extend the base template + add the content block + endblock! -->
+
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h1 class="main-title">Account Details</h1>
+
+<p>For a complete experience on this website, please enter your personal details in the form below:</p>
+
+<form method="post" class="account-form">
+  <div class="mb-3">
+    <label for="first_name" class="form-label">First Name</label>
+    <input type="text" class="form-control prefiled" id="first_name" name="first_name" value="{{ user.first_name if user is defined else '' }}" />
+  </div>
+  <div class="mb-3">
+    <label for="last_name" class="form-label">Last Name</label>
+    <input type="text" class="form-control prefiled" id="last_name" name="last_name" value="{{ user.last_name if user is defined else '' }}">
+  </div>
+  <div class="mb-3">
+    <label for="age" class="form-label">Age</label>
+    <input type="text" class="form-control prefiled" id="age" name="age" value="{{ user.age if user is defined else '' }}">
+  </div>
+  <button type="submit" class="btn btn-primary">Save Details</button>
+</form>
+
+{% endblock %}

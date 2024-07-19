@@ -1,0 +1,49 @@
+<!-- TODO: Insert the content blocks for the front page. -->
+<!-- TODO: Don't forget to extend the base template ;) -->
+{% extends '_base.html' %}
+
+{% block title %}CloudSnap {% endblock %}
+
+{% block navbar %}
+<div class="collapse navbar-collapse" id="navbarToggle">
+<div class="navbar-nav mr-auto">
+  <a class="nav-item nav-link active" href="/">Home</a>
+  <a class="nav-item nav-link" href="/edit">Edit</a>
+  <a class="nav-item nav-link" href="/about">About</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<h1 class="main-title">Gallery</h1>
+
+<div class="container">
+{% if nature %}
+  <h2>Nature</h2>
+  <div class="gallery-row">
+    {% for image in nature %}
+    <div class="square-box">
+      <a href="{{ url_for('display', img=image.img) }}" target="_blank">
+        <img class="square-image" src="{{ image.tmb }}" alt="{{ image }}">
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+{% endif %}
+{% if people %}
+  <h2>People</h2>
+  <div class="gallery-row">
+    {% for image in people %}
+    <div class="square-box">
+      <a href="{{ url_for('display', img=image.img) }}" target="_blank">
+        <img class="square-image" src="{{ image.tmb }}" alt="{{ image }}">
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+
+
+</div>
+
+{% endblock %}

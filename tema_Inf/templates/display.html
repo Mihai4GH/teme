@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block title %}CloudSnap{% endblock %}
+
+{% block content %}
+<h1 class="main-title">Image</h1>
+    <p>Here is the image you requested:</p>
+<div class="container-img">
+    <img class="center-imagei" style="object-fit: contain" src="{{ img }}" alt="{{ img }}">
+</div>
+
+{% endblock %}
